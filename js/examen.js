@@ -8,7 +8,8 @@ let examenFinalizado = false;
 function startExam() {
   selectedQuestions = shuffleArray(questions).slice(0, 10);
   showQuestion(currentQuestionIndex);
-  document.getElementById('btn-finalizar').style.visibility = 'hidden';
+  document.getElementById('btn-finalizar').style.display = 'none';
+  startTimer();
 }
 
 function shuffleArray(array) {
@@ -41,14 +42,14 @@ function showQuestion(index) {
   });
 
   questionContainer.appendChild(questionElement);
-  document.getElementById('pregunta-actual').textContent = `Pregunta ${index + 1} de ${selectedQuestions.length}`;
+  document.getElementById('pregunta-actual').textContent = index + 1;
 
   if (index < selectedQuestions.length - 1) {
     document.getElementById('btn-siguiente').style.display = 'none';
-    document.getElementById('btn-finalizar').style.visibility = 'hidden';
+    document.getElementById('btn-finalizar').style.display = 'none';
   } else {
     document.getElementById('btn-siguiente').style.display = 'none';
-    document.getElementById('btn-finalizar').style.visibility = 'visible';
+    document.getElementById('btn-finalizar').style.display = 'block';
   }
 
   startTimer();
@@ -73,10 +74,10 @@ function validateAnswer(selected, correct, element) {
 
   if (currentQuestionIndex < selectedQuestions.length - 1) {
     document.getElementById('btn-siguiente').style.display = 'block';
-    document.getElementById('btn-finalizar').style.visibility = 'hidden';
+    document.getElementById('btn-finalizar').style.display = 'none';
   } else {
     document.getElementById('btn-siguiente').style.display = 'none';
-    document.getElementById('btn-finalizar').style.visibility = 'visible';
+    document.getElementById('btn-finalizar').style.display = 'block';
   }
 }
 
