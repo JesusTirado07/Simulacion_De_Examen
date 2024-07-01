@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-image: url('https://p4.wallpaperbetter.com/wallpaper/715/384/992/anime-landscape-scenic-stream-sky-wallpaper-preview.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+}
+
+.contenedor-examen {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  max-width: 600px;
+}
+
+.Preguntas h2 {
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.pregunta h3 {
+  margin-bottom: 15px;
+}
+
+.opcion {
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.opcion.correcta {
+  background: green;
+  color: #fff;
+}
+
+.opcion.incorrecta {
+  background: red;
+  color: #fff;
+}
+
+#temporizador {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffd700;
+  color: #333;
+}
+
+button#btn-enviar {
+  display: block;
+  margin: 20px auto;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examen</title>
+  <link rel="stylesheet" type="text/css" href="../style/preguntas.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+</head>
+<body>
+
+  <div class="contenedor-examen">
+    <div class="Preguntas">
+      <h2>Preguntas del Examen</h2>
+    </div>
+
+    <div id="contenedor-preguntas">
+    </div>
+
+    <div id="temporizador">Tiempo restante: <span id="tiempo-restante">15</span> segundos</div>
+
+    <div id="progreso-pregunta">Pregunta <span id="pregunta-actual">1</span> de 10</div>
+
+    <button id="btn-siguiente" onclick="siguientePregunta()" style="display: none;">Siguiente Pregunta</button>
+    <button id="btn-finalizar" onclick="finalizarExamen()" style="display: none;">Finalizar Examen</button>
+
+    <div id="resultado-examen" style="display: none;">
+      <h2>Resultado del Examen</h2>
+      <p>Respuestas correctas: <span id="respuestas-correctas"></span></p>
+    </div>
+  </div>
+
+  <script src="../js/preguntas.js"></script>
+  <script src="../js/examen.js"></script>
+</body>
+</html>
